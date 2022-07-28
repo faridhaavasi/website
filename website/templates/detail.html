@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block detail %}
+<div>
+    <center>
+    <h4>{{article.title}}</h4>
+    <img src="{{article.image.url}}"  width="120" height="120">
+    <h5>{{article.description}}</h5>
+    <p>{{article.text}}</p>
+
+    
+
+    </center>
+</div>
+
+
+{% endblock detail %}

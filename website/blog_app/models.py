@@ -6,6 +6,7 @@ class Article(models.Model):
     description=models.CharField(max_length=50)
     text=models.TextField()
     image=models.ImageField(upload_to='maghalat',null=True)
+    views=models.IntegerField(null=True)
 
 
     def __str__(self):

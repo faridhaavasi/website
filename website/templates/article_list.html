@@ -1,7 +1,6 @@
 {% extends 'index.html' %}
-{% block article_list %}
-
-
+{% block articel_list %} 
+<div>
 <style>
 table {
   font-family: arial, sans-serif;
@@ -30,12 +29,12 @@ tr:nth-child(even) {
   </tr>
   {% for articel in articles %}
   <tr>
-    <td><a href="">{{articel.title}}</a></td>
+    <td><a href="detail/{{articel.id}}">{{articel.title}}</a></td>
     <td>{{articel.description}}</td>
     <td><img src="{{articel.image.url}}"  width="50" height="50"></td>
-    <td>0</td>  
+    <td>{{articel.id}}</td>  
    {% endfor %}   
    
   </tr>
-
-{% endblock article_list %}
+  </div> 
+  {% endblock articel_list %}
