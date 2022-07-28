@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+{% block article_list %}
+
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<table>
+  <tr>
+    <th>title</th>
+    <th>description</th>
+    <th>image</th>
+    <th>views</th>
+
+  </tr>
+  {% for articel in articles %}
+  <tr>
+    <td><a href="">{{articel.title}}</a></td>
+    <td>{{articel.description}}</td>
+    <td><img src="{{articel.image.url}}"  width="50" height="50"></td>
+    <td>0</td>  
+   {% endfor %}   
+   
+  </tr>
+
+{% endblock article_list %}
