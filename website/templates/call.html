@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block call %}
+<hr>
+
+
+<form method="post">
+  {% csrf_token %}
+  <center>
+  <label for="fname">عنوان:</label>
+  <input type="text" id="fname" name="title"><br><br>
+<hr>
+  <label for="fname">ایمیل:</label>
+  <input type="text" id="fname" name="email"><br><br>
+<hr>
+  <label for="fname">متن:</label>
+  <input type="text" id="fname" name="description"><br><br>
+<hr>
+  <input type="submit" value="ارسال">
+</form>
+</center>
+{% endblock call %}

@@ -1,4 +1,5 @@
 
+from msilib.schema import Class
 from django.db import models
 
 class Article(models.Model):
@@ -21,9 +22,10 @@ class Abute(models.Model):
 
 
 class Ticket(models.Model):
-    name=models.CharField(max_length=50)
+    title=models.CharField(max_length=50)
     email=models.CharField(max_length=50)
-    body=models.TextField()
+    description=models.TextField()
 
     def __str__(self):
         return self.name
+
