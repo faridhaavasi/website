@@ -12,7 +12,7 @@ def Atricle_list(request):
 
 def detail(request,id):
     article=Article.objects.get(id=id)
-    article.views=+1
+    article.views+=1
     article.save()
     return render(request,'detail.html',context={'article':article})
 def abute_me(request):
