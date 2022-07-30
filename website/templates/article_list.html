@@ -21,10 +21,10 @@ tr:nth-child(even) {
 
 <table>
   <tr>
-    <th>title</th>
-    <th>description</th>
-    <th>image</th>
-    <th>views</th>
+    <th>عنوان</th>
+    <th>متن</th>
+    <th>تصویر</th>
+    <th>بازدید</th>
 
   </tr>
   {% for articel in articles %}
@@ -32,7 +32,7 @@ tr:nth-child(even) {
     <td><a href="detail/{{articel.id}}">{{articel.title}}</a></td>
     <td>{{articel.description}}</td>
     <td><img src="{{articel.image.url}}"  width="50" height="50"></td>
-    <td>{{articel.id}}</td>  
+    <td>{{articel.views}}</td>  
    {% endfor %}   
    
   </tr>
