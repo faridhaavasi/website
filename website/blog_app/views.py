@@ -1,5 +1,4 @@
 
-from turtle import title
 from django.shortcuts import render
 from . models import Article,Abute,Ticket
 # Create your views here.
