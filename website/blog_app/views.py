@@ -20,10 +20,11 @@ def abute_me(request):
 
 def call(request):
     if request.method=='POST':
-        title=request.POST.get('title')
-        email=request.POST.get('email')
-        description=request.POST.get('description')
-        Ticket.objects.create(title=title,email=email,description=description)
+        if title and email and description:
+            title=request.POST.get('title')
+            email=request.POST.get('email')
+            description=request.POST.get('description')
+            Ticket.objects.create(title=title,email=email,description=description)
 
     
     return render(request,'call.html')    
