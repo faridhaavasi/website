@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #my apps
     'blog_app.apps.BlogAppConfig',
     'account.apps.AccountConfig',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -128,7 +129,8 @@ STATICFILES_DIRS=[
 ]
 MEDIA_URL='media/'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
-# Default primary key field type
+AWS_LOCATION = 'static'
+
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
