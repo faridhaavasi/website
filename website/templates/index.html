@@ -24,13 +24,15 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'blog:abute_me' %}">درباره من</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'blog:call' %}">تماس با من</a></li>
                         {% if request.user.is_authenticated %}
-                        <div>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'blog:home' %}">{{request.user.first_name}}</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'account:logout' %}">خروج</a></li>
+
                           
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'account:logout' %}">خروج کاربر</a></li>
-                        </div>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'blog:home' %}">{{request.user.username}}</a></li>
+                        
                         {% else %}
                         
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'account:register' %}">ثبت نام</a></li>
                         
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'account:login' %}">ورود</a></li>
                         
